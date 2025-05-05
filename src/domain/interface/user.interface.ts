@@ -20,4 +20,5 @@ export abstract class UserInterface {
     abstract list(query: ListUserInput): Promise<ListUserOutput>;
     abstract update(id: string, username: string, firstName: string, lastName: string): Promise<void>;
     abstract delete(id: string): Promise<void>;
+    abstract updatePassword(id: string, newPassword: string): Promise<void>;
 };

@@ -6,13 +6,15 @@ import { NoteModule } from './infra/modules/note.module';
 import { AuthModule } from './infra/modules/auth.module';
 import { RolesGuard } from './middleware/role.guard';
 import { APP_GUARD } from '@nestjs/core';
+import { SecurityModule } from './infra/modules/security.module';
 
 @Module({
   imports: [
     UserModule,
     OrderModule,
     NoteModule,
-    AuthModule
+    AuthModule,
+    SecurityModule
   ],
   providers: [
     PrismaService,
@@ -22,4 +24,4 @@ import { APP_GUARD } from '@nestjs/core';
     },
   ],
 })
-export class AppModule { }
+export class AppModule {}

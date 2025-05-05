@@ -13,6 +13,8 @@ import { ListUserUsecase } from "src/usecase/user/list.usecase";
 import { UpdateUserUsecase } from "src/usecase/user/update.usecase";
 import { DeleteUserUsecase } from "src/usecase/user/delete.usecase";
 import { LoggerMiddleware } from "src/middleware/logger.middleware";
+import { UpdatePasswordController } from "../controllers/user/update-password.controller";
+import { UpdatePasswordUsecase } from "src/usecase/user/update-password.usecase";
 
 
 
@@ -23,7 +25,8 @@ import { LoggerMiddleware } from "src/middleware/logger.middleware";
         FindUserController,
         UpdateUserController,
         ListUserController,
-        DeleteUserController
+        DeleteUserController,
+        UpdatePasswordController
     ],
     providers: [
         PrismaService,
@@ -36,7 +39,8 @@ import { LoggerMiddleware } from "src/middleware/logger.middleware";
         FindUserUsecase,
         ListUserUsecase,
         UpdateUserUsecase,
-        DeleteUserUsecase
+        DeleteUserUsecase,
+        UpdatePasswordUsecase
     ],
 })
 
@@ -50,7 +54,8 @@ export class UserModule implements NestModule {
                 FindUserController,
                 UpdateUserController,
                 ListUserController,
-                DeleteUserController
+                DeleteUserController,
+                UpdatePasswordController
             )
     }
 };

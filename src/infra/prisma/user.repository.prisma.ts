@@ -11,7 +11,22 @@ import { Role } from "src/domain/enum/role.enum";
 
 @Injectable()
 export class UserService implements UserInterface {
-    constructor(private readonly repository: PrismaService) {};
+    constructor(private readonly repository: PrismaService) {}
+    
+    
+    async updatePassword(id: string, newPassword: string): Promise<void> {
+        
+        await this.repository.user.update({
+            where: {
+                id
+            },
+            data: {
+                password: newPassword
+            }
+        });
+
+        return;
+    };
     
     async create(user: UserEntity): Promise<void> {
         const {
