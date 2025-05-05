@@ -1,4 +1,4 @@
-import { Module } from "@nestjs/common";
+import { MiddlewareConsumer, Module, NestModule } from "@nestjs/common";
 import { CreateUserController } from "../controllers/user/create.controller";
 import { FindUserController } from "../controllers/user/find.controller";
 import { UpdateUserController } from "../controllers/user/update.controller";
@@ -12,6 +12,7 @@ import { FindUserUsecase } from "src/usecase/user/find.usecase";
 import { ListUserUsecase } from "src/usecase/user/list.usecase";
 import { UpdateUserUsecase } from "src/usecase/user/update.usecase";
 import { DeleteUserUsecase } from "src/usecase/user/delete.usecase";
+import { LoggerMiddleware } from "src/middleware/logger.middleware";
 
 
 
@@ -40,4 +41,16 @@ import { DeleteUserUsecase } from "src/usecase/user/delete.usecase";
 })
 
 
-export class UserModule {};
+export class UserModule implements NestModule {
+    configure(consumer: MiddlewareConsumer) {
+        consumer
+            .apply(LoggerMiddleware)
+            .forRoutes(
+                CreateUserController,
+                FindUserController,
+                UpdateUserController,
+                ListUserController,
+                DeleteUserController
+            )
+    }
+};

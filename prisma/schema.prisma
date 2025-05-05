@@ -9,38 +9,19 @@ datasource db {
 }
 
 model Contract {
-  id               String        @id
-  number           Int
-  local            String
-  phone            String
+  id               String   @id @map("id")
+  number           Int      @map("number")
+  local            String   @map("local")
+  phone            String   @map("phone")
   phoneSecondary   String?
-  installationDate DateTime
-  installationHour String
-  products         String[]
-  price            Float
-  status           String
-  userId           String
-  createdAt        DateTime      @default(now())
-  updatedAt        DateTime
-  type             TypeContract?
-  user             User          @relation(fields: [userId], references: [id])
-}
-
-model Countries {
-  id        Int      @id @unique
-  country   String
-  uf        String
-  createdAt DateTime @default(now())
-  updatedAt DateTime
-}
-
-model Goals {
-  id        String   @id
-  goal      Float
-  user_id   String
-  createdAt DateTime @default(now())
-  updatedAt DateTime
-  User      User     @relation(fields: [user_id], references: [id])
+  installationDate DateTime @map("installationDate")
+  installationHour String   @map("installationHour")
+  price            Float    @map("price")
+  status           String   @map("status")
+  userId           String   @map("userId")
+  createdAt        DateTime @map("createdAt")
+  updatedAt        DateTime @map("updatedAt")
+  user             User     @relation(fields: [userId], references: [id])
 }
 
 model Notes {
@@ -52,62 +33,16 @@ model Notes {
   user      User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
 }
 
-model OwnerTeam {
-  owner_id  String   @unique
-  team_id   String   @unique
-  createdAt DateTime @default(now())
-  updatedAt DateTime
-  User      User     @relation(fields: [owner_id], references: [id], onDelete: Cascade)
-  Team      Team     @relation(fields: [team_id], references: [id])
-
-  @@id([owner_id, team_id])
-}
-
-model Team {
-  id        String     @id
-  name      String
-  createdAt DateTime   @default(now())
-  updatedAt DateTime
-  OwnerTeam OwnerTeam?
-  User      User[]
-}
 
 model User {
   id           String        @id
   username     String        @unique
   name         String
   lastname     String
-  role         Role          @default(USER)
+  role         String 
   password     String
-  createdAt    DateTime      @default(now())
+  createdAt    DateTime     
   updatedAt    DateTime
-  team_id      String?
-  accessStatus AccessStatus? @default(ACTIVE)
   Contract     Contract[]
-  Goals        Goals[]
   Notes        Notes[]
-  OwnerTeam    OwnerTeam?
-  Team         Team?         @relation(fields: [team_id], references: [id])
-}
-
-enum AccessStatus {
-  ACTIVE
-  REVOGED
-}
-
-enum Role {
-  USER
-  MANAGER
-  ADMIN
-}
-
-enum Status {
-  PENDENTE
-  CANCELADO
-  CONECTADO
-}
-
-enum TypeContract {
-  BASE
-  PROSPECT
 }

@@ -25,6 +25,9 @@ export class AuthService implements AuthInterface {
 
         const payload = sign({
             id: user.id,
+            username: user.username,
+            firstName: user.name,
+            lastName: user.lastname,
             role: user.role,
         }, secret, {
             expiresIn: "1d",

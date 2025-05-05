@@ -7,7 +7,7 @@ import {
   OrderInterface,
 } from 'src/domain/interface/order.interface';
 import { PrismaService } from './prisma.service';
-import { Prisma, Status } from '@prisma/client';
+import { Prisma } from '@prisma/client';
 import { endOfDay, startOfDay, subDays } from 'date-fns';
 
 @Injectable()
@@ -50,7 +50,6 @@ export class OrderService implements OrderInterface {
       installationHour: schedulingTime,
       price,
       phone: contact,
-      products: [''],
       status,
       user: {
         connect: {

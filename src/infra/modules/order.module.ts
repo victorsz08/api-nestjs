@@ -1,4 +1,4 @@
-import { Module } from "@nestjs/common";
+import { MiddlewareConsumer, Module, NestModule } from "@nestjs/common";
 import { CreateOrderController } from "../controllers/order/create.controller";
 import { FindOrderController } from "../controllers/order/find.controller";
 import { ListOrderController } from "../controllers/order/list.controller";
@@ -16,6 +16,7 @@ import { UpdateStatusUsecase } from "src/usecase/order/update-status.usecase";
 import { UpdateSchedulingUsecase } from "src/usecase/order/update-scheduling.usecase";
 import { UpdateOrderUsecase } from "src/usecase/order/update.usecase";
 import { DeleteOrderUsecase } from "src/usecase/order/delete.usecase";
+import { LoggerMiddleware } from "src/middleware/logger.middleware";
 
 
 
@@ -48,4 +49,18 @@ import { DeleteOrderUsecase } from "src/usecase/order/delete.usecase";
     ]
 })
 
-export class OrderModule {};
+export class OrderModule implements NestModule {
+    configure(consumer: MiddlewareConsumer) {
+        consumer
+            .apply(LoggerMiddleware)
+            .forRoutes(
+                CreateOrderController,
+                FindOrderController,
+                ListOrderController,
+                UpdateStatusController,
+                UpdateSchedulingController,
+                UpdateOrderController,
+                DeleteOrderController
+            )
+    }
+};
