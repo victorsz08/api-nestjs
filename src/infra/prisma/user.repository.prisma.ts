@@ -11,7 +11,22 @@ import { Role } from "src/domain/enum/role.enum";
 
 @Injectable()
 export class UserService implements UserInterface {
-    constructor(private readonly repository: PrismaService) {};
+    constructor(private readonly repository: PrismaService) {}
+    
+    
+    async updatePassword(id: string, newPassword: string): Promise<void> {
+        
+        await this.repository.user.update({
+            where: {
+                id
+            },
+            data: {
+                password: newPassword
+            }
+        });
+
+        return;
+    };
     
     async create(user: UserEntity): Promise<void> {
         const {
@@ -24,6 +39,14 @@ export class UserService implements UserInterface {
             createdAt,
             updatedAt
         } = user;
+
+        const usernameALreadyExists = await this.repository.user.findUnique({
+            where: { username }
+        });
+
+        if(usernameALreadyExists) {
+            throw new HttpException("username já existe", HttpStatus.BAD_REQUEST);
+        };
 
         const data: Prisma.UserCreateInput = {
             id,
@@ -127,10 +150,36 @@ export class UserService implements UserInterface {
     };
 
     async update(id: string, username: string, firstName: string, lastName: string): Promise<void> {
-        throw new Error("Method not implemented.");
-    };
+        const user = await this.find(id);
+        if(user.username !== username) {
+            const usernameALreadyExists = await this.repository.user.findUnique({
+                where: { username }
+            });
+
+            if(usernameALreadyExists) {
+                throw new HttpException("username já existe", HttpStatus.BAD_REQUEST);
+            };
+        };
+
+        const data: Prisma.UserUpdateInput = {
+            username,
+            name: firstName,
+            lastname: lastName,
+            updatedAt: new Date()
+        };
+
+        await this.repository.user.update({
+            where: { id },
+            data
+        });
+
+        return;
+    };  
 
     async delete(id: string): Promise<void> {
-        throw new Error("Method not implemented.");
+        await this.find(id);
+        await this.repository.user.delete({ where: { id }});
+
+        return;
     };
 };
