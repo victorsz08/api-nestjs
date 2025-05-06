@@ -7,6 +7,7 @@ import { AuthModule } from './infra/modules/auth.module';
 import { RolesGuard } from './middleware/role.guard';
 import { APP_GUARD } from '@nestjs/core';
 import { SecurityModule } from './infra/modules/security.module';
+import { ReportModule } from './infra/modules/report.module';
 
 @Module({
   imports: [
@@ -14,7 +15,8 @@ import { SecurityModule } from './infra/modules/security.module';
     OrderModule,
     NoteModule,
     AuthModule,
-    SecurityModule
+    SecurityModule,
+    ReportModule
   ],
   providers: [
     PrismaService,
