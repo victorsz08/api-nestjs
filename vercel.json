@@ -2,10 +2,10 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/main.js",
+      "src": "package.json",
       "use": "@vercel/node",
       "config": {
-        "deployCommand": "npm install && npm run build && npm run start:prod",
+        "deployCommand": "npm install && npm run build",
         "zeroConfig": true
       }
     }
