@@ -2,18 +2,23 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
+      "src": "src/main.ts",
       "use": "@vercel/node",
       "config": {
-        "deployCommand": "npm install && npm run build",
-        "zeroConfig": true
+        "nodeVersion": "20.x"
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/main.js"
+      "dest": "src/main.ts",
+      "methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ]
     }
   ]
 }
