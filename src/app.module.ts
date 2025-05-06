@@ -8,8 +8,10 @@ import { RolesGuard } from './middleware/role.guard';
 import { APP_GUARD } from '@nestjs/core';
 import { SecurityModule } from './infra/modules/security.module';
 import { ReportModule } from './infra/modules/report.module';
+import { AppController } from './app.controller';
 
 @Module({
+  controllers: [AppController],
   imports: [
     UserModule,
     OrderModule,
