@@ -1,4 +1,4 @@
-import { MiddlewareConsumer, Module, NestModule } from "@nestjs/common";
+import { MiddlewareConsumer, Module, NestModule, RequestMethod } from "@nestjs/common";
 import { AuthLoginController } from "../controllers/auth/login.controller";
 import { PrismaService } from "../prisma/prisma.service";
 import { AuthService } from "../prisma/auth.repository.prisma";
@@ -28,7 +28,7 @@ export class AuthModule implements NestModule {
         consumer
             .apply(LoggerMiddleware)
             .forRoutes(
-                AuthSessionController
+                { path: 'auth/session', method: RequestMethod.GET },
             )
     }
 };
