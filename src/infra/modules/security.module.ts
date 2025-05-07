@@ -3,10 +3,10 @@ import { RecoveryAccessController } from "../controllers/security/recovery-acces
 import { GrantedAccessController } from "../controllers/security/granted-access.controller";
 import { PrismaService } from "../prisma/prisma.service";
 import { SecurityService } from "../prisma/security.repository.prisma";
-import { SecurityInterface } from "src/domain/interface/security.inteface";
-import { RecoveryAccessUsecase } from "src/usecase/security/recovery-access.usecase";
-import { GrantedAccessUsecase } from "src/usecase/security/granted-access.usecase";
-import { LoggerMiddleware } from "src/middleware/logger.middleware";
+import { SecurityInterface } from "../../domain/interface/security.inteface";
+import { RecoveryAccessUsecase } from "../../usecase/security/recovery-access.usecase";
+import { GrantedAccessUsecase } from "../../usecase/security/granted-access.usecase";
+import { LoggerMiddleware } from "../../middleware/logger.middleware";
 
 
 

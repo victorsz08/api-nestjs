@@ -8,15 +8,15 @@ import { UpdateOrderController } from "../controllers/order/update.controller";
 import { DeleteOrderController } from "../controllers/order/delete.controller";
 import { PrismaService } from "../prisma/prisma.service";
 import { OrderService } from "../prisma/order.repository.prisma";
-import { OrderInterface } from "src/domain/interface/order.interface";
-import { CreateOrderUsecase } from "src/usecase/order/create.usecase";
-import { FindOrderUsecase } from "src/usecase/order/find.usecase";
-import { ListOrderUsecase } from "src/usecase/order/list.usecase";
-import { UpdateStatusUsecase } from "src/usecase/order/update-status.usecase";
-import { UpdateSchedulingUsecase } from "src/usecase/order/update-scheduling.usecase";
-import { UpdateOrderUsecase } from "src/usecase/order/update.usecase";
-import { DeleteOrderUsecase } from "src/usecase/order/delete.usecase";
-import { LoggerMiddleware } from "src/middleware/logger.middleware";
+import { OrderInterface } from "../../domain/interface/order.interface";
+import { CreateOrderUsecase } from "../../usecase/order/create.usecase";
+import { FindOrderUsecase } from "../../usecase/order/find.usecase";
+import { ListOrderUsecase } from "../../usecase/order/list.usecase";
+import { UpdateStatusUsecase } from "../../usecase/order/update-status.usecase";
+import { UpdateSchedulingUsecase } from "../../usecase/order/update-scheduling.usecase";
+import { UpdateOrderUsecase } from "../../usecase/order/update.usecase";
+import { DeleteOrderUsecase } from "../../usecase/order/delete.usecase";
+import { LoggerMiddleware } from "../../middleware/logger.middleware";
 
 
 

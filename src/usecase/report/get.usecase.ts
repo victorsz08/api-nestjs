@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { Usecase } from "../usecase";
-import { ReportInterface } from "src/domain/interface/report.interface";
-import { ReportEntity } from "src/domain/entities/report.entity";
+import { ReportInterface } from "../../domain/interface/report.interface";
+import { ReportEntity } from "../../domain/entities/report.entity";
 
 
 

@@ -1,6 +1,6 @@
 import { Controller, Get, HttpCode, Param } from "@nestjs/common";
-import { FindUserValidator } from "src/infra/validators/user/find.validator";
-import { FindUserUsecase } from "src/usecase/user/find.usecase";
+import { FindUserValidator } from "../../../infra/validators/user/find.validator";
+import { FindUserUsecase } from "../../../usecase/user/find.usecase";
 
 
 

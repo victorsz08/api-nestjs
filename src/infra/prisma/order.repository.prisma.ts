@@ -1,11 +1,11 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { OrderEntity } from 'src/domain/entities/order.entity';
-import { StatusEnum } from 'src/domain/enum/status.enum';
+import { OrderEntity } from '../../domain/entities/order.entity';
+import { StatusEnum } from '../../domain/enum/status.enum';
 import {
   ListOrderInput,
   ListOrderOutput,
   OrderInterface,
-} from 'src/domain/interface/order.interface';
+} from '../../domain/interface/order.interface';
 import { PrismaService } from './prisma.service';
 import { Prisma } from '@prisma/client';
 import { endOfDay, startOfDay, subDays } from 'date-fns';

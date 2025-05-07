@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { Usecase } from "../usecase";
-import { NoteInterface } from "src/domain/interface/note.interface";
+import { NoteInterface } from "../../domain/interface/note.interface";
 
 
 

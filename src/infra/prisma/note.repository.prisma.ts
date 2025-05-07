@@ -1,10 +1,10 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { NoteEntity } from 'src/domain/entities/note.entity';
+import { NoteEntity } from '../../domain/entities/note.entity';
 import {
   ListNoteInput,
   ListNoteOutput,
   NoteInterface,
-} from 'src/domain/interface/note.interface';
+} from '../../domain/interface/note.interface';
 import { PrismaService } from './prisma.service';
 import { Prisma } from '@prisma/client';
 

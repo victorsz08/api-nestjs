@@ -1,9 +1,9 @@
 import { Body, Controller, HttpCode, Param, Post } from "@nestjs/common";
-import { Roles } from "src/domain/decorators/role.decorator";
-import { Role } from "src/domain/enum/role.enum";
-import { GrantedAccessValidator } from "src/infra/validators/security/granted-access.validator";
-import { RecoveryAccessValidator } from "src/infra/validators/security/recovery-access.validator";
-import { GrantedAccessUsecase } from "src/usecase/security/granted-access.usecase";
+import { Roles } from "../../../domain/decorators/role.decorator";
+import { Role } from "../../../domain/enum/role.enum";
+import { GrantedAccessValidator } from "../../../infra/validators/security/granted-access.validator";
+import { RecoveryAccessValidator } from "../../../infra/validators/security/recovery-access.validator";
+import { GrantedAccessUsecase } from "../../../usecase/security/granted-access.usecase";
 
 
 @Controller("securities/grantedaccess")

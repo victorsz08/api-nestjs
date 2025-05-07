@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { Usecase } from "../usecase";
-import { UserInterface } from "src/domain/interface/user.interface";
-import { UserEntity } from "src/domain/entities/user.entity";
+import { UserInterface } from "../../domain/interface/user.interface";
+import { UserEntity } from "../../domain/entities/user.entity";
 
 
 export type FindUserInputDto = {

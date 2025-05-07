@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { Usecase } from "../usecase";
-import { SecurityInterface } from "src/domain/interface/security.inteface";
+import { SecurityInterface } from "../../domain/interface/security.inteface";
 import { hash } from "bcryptjs";
 
 

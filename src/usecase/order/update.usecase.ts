@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { Usecase } from "../usecase";
-import { OrderInterface } from "src/domain/interface/order.interface";
+import { OrderInterface } from "../../domain/interface/order.interface";
 
 
 

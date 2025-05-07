@@ -1,6 +1,6 @@
 import { Controller, Get, HttpCode, Query } from "@nestjs/common";
-import { GetReportValidator } from "src/infra/validators/reports/get.validator";
-import { GetReportPerDayUsecase } from "src/usecase/report/per-day.usecase";
+import { GetReportValidator } from "../../../infra/validators/reports/get.validator";
+import { GetReportPerDayUsecase } from "../../../usecase/report/per-day.usecase";
 
 
 @Controller("reports/perday")

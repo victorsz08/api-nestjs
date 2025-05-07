@@ -1,6 +1,6 @@
 import { Controller, Get, HttpCode, Param, Query } from "@nestjs/common";
-import { GetReportValidator } from "src/infra/validators/reports/get.validator";
-import { GetReportUsecase } from "src/usecase/report/get.usecase";
+import { GetReportValidator } from "../../../infra/validators/reports/get.validator";
+import { GetReportUsecase } from "../../../usecase/report/get.usecase";
 
 
 

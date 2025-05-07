@@ -1,6 +1,6 @@
 import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
 import { Usecase } from "../usecase";
-import { UserInterface } from "src/domain/interface/user.interface";
+import { UserInterface } from "../../domain/interface/user.interface";
 import { compare, hash } from "bcryptjs";
 
 

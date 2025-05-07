@@ -1,7 +1,7 @@
 import { Body, Controller, HttpCode, Param, Put } from "@nestjs/common";
-import { FindUserValidator } from "src/infra/validators/user/find.validator";
-import { UpdateUserValidator } from "src/infra/validators/user/update.validator";
-import { UpdateUserUsecase } from "src/usecase/user/update.usecase";
+import { FindUserValidator } from "../../../infra/validators/user/find.validator";
+import { UpdateUserValidator } from "../../../infra/validators/user/update.validator";
+import { UpdateUserUsecase } from "../../../usecase/user/update.usecase";
 
 
 

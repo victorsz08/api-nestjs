@@ -1,7 +1,7 @@
 import { Injectable, NestMiddleware } from '@nestjs/common';
 import { Request, Response, NextFunction } from 'express';
 import { decode, verify } from 'jsonwebtoken';
-import { UserEntity } from 'src/domain/entities/user.entity';
+import { UserEntity } from '../domain/entities/user.entity';
 
 const SECRET = process.env.SECRET || "0010";
 

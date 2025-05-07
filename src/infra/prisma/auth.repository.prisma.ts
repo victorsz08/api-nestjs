@@ -1,5 +1,5 @@
 import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
-import { AuthInterface, AuthPayload } from "src/domain/interface/auth.interface";
+import { AuthInterface, AuthPayload } from "../../domain/interface/auth.interface";
 import { PrismaService } from "./prisma.service";
 import { compare } from "bcryptjs";
 import { sign } from "jsonwebtoken";

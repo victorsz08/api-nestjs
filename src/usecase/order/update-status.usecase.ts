@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
-import { StatusEnum } from "src/domain/enum/status.enum";
+import { StatusEnum } from "../../domain/enum/status.enum";
 import { Usecase } from "../usecase";
-import { OrderInterface } from "src/domain/interface/order.interface";
+import { OrderInterface } from "../../domain/interface/order.interface";
 
 
 

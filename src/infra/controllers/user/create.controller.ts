@@ -1,8 +1,8 @@
 import { Body, Controller, HttpCode, Post } from "@nestjs/common";
-import { Roles } from "src/domain/decorators/role.decorator";
-import { Role } from "src/domain/enum/role.enum";
-import { CreateUserValidator } from "src/infra/validators/user/create.validator";
-import { CreateUserUsecase } from "src/usecase/user/create.usecase";
+import { Roles } from "../../../domain/decorators/role.decorator";
+import { Role } from "../../../domain/enum/role.enum";
+import { CreateUserValidator } from "../../../infra/validators/user/create.validator";
+import { CreateUserUsecase } from "../../../usecase/user/create.usecase";
 
 
 

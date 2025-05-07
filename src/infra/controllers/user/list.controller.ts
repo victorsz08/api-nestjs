@@ -1,8 +1,8 @@
 import { Controller, Get, HttpCode, Query } from "@nestjs/common";
-import { Roles } from "src/domain/decorators/role.decorator";
-import { Role } from "src/domain/enum/role.enum";
-import { ListUserValidator } from "src/infra/validators/user/list.validator";
-import { ListUserUsecase } from "src/usecase/user/list.usecase";
+import { Roles } from "../../../domain/decorators/role.decorator";
+import { Role } from "../../../domain/enum/role.enum";
+import { ListUserValidator } from "../../../infra/validators/user/list.validator";
+import { ListUserUsecase } from "../../../usecase/user/list.usecase";
 
 
 

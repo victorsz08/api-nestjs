@@ -2,9 +2,9 @@ import { v4 as uuid } from "uuid";
 import { hash } from "bcryptjs";
 import { Injectable } from "@nestjs/common";
 import { Usecase } from "../usecase";
-import { UserInterface } from "src/domain/interface/user.interface";
-import { UserEntity } from "src/domain/entities/user.entity";
-import { Role } from "src/domain/enum/role.enum";
+import { UserInterface } from "../../domain/interface/user.interface";
+import { UserEntity } from "../../domain/entities/user.entity";
+import { Role } from "../../domain/enum/role.enum";
 
 export type CreateUserInputDto = {
     username: string;

@@ -1,6 +1,6 @@
 import { Body, Controller, HttpCode, Param, Post } from "@nestjs/common";
-import { CreateNoteValidator, FindUserNoteValidator } from "src/infra/validators/note/create.validator";
-import { CreateNoteUseCase } from "src/usecase/note/create.usecase";
+import { CreateNoteValidator, FindUserNoteValidator } from "../../../infra/validators/note/create.validator";
+import { CreateNoteUseCase } from "../../../usecase/note/create.usecase";
 
 
 

@@ -1,8 +1,8 @@
 import { Injectable } from "@nestjs/common";
 import { Usecase } from "../usecase";
-import { NoteInterface } from "src/domain/interface/note.interface";
+import { NoteInterface } from "../../domain/interface/note.interface";
 import { v4 as uuid } from "uuid";
-import { NoteEntity } from "src/domain/entities/note.entity";
+import { NoteEntity } from "../../domain/entities/note.entity";
 
 
 export type CreateNoteInputDto = {

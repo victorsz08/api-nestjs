@@ -1,6 +1,6 @@
 import { Controller, Get, HttpCode, Req, Res } from "@nestjs/common";
 import { Request, Response } from "express";
-import { UserEntity } from "src/domain/entities/user.entity";
+import { UserEntity } from "../../../domain/entities/user.entity";
 
 interface RequestCustom extends Request {
     user: Partial<UserEntity>;

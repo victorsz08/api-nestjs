@@ -1,6 +1,6 @@
 import { Controller, Delete, HttpCode, Param } from "@nestjs/common";
-import { FindNoteValidator } from "src/infra/validators/note/find.validator";
-import { DeleteNoteUseCase } from "src/usecase/note/delete.usecase";
+import { FindNoteValidator } from "../../../infra/validators/note/find.validator";
+import { DeleteNoteUseCase } from "../../../usecase/note/delete.usecase";
 
 
 

@@ -1,5 +1,5 @@
-import { StatusEnum } from "src/domain/enum/status.enum";
-import { ListOrderOutput, OrderInterface } from "src/domain/interface/order.interface";
+import { StatusEnum } from "../../domain/enum/status.enum";
+import { ListOrderOutput, OrderInterface } from "../../domain/interface/order.interface";
 import { Usecase } from "../usecase";
 
 

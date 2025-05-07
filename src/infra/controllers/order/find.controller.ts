@@ -1,6 +1,6 @@
 import { Controller, Get, HttpCode, Param } from "@nestjs/common";
-import { FindOrderValidator } from "src/infra/validators/order/find.validator";
-import { FindOrderUsecase } from "src/usecase/order/find.usecase";
+import { FindOrderValidator } from "../../../infra/validators/order/find.validator";
+import { FindOrderUsecase } from "../../../usecase/order/find.usecase";
 
 
 

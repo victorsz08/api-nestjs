@@ -1,8 +1,8 @@
 import { Controller, Delete, HttpCode, Param } from "@nestjs/common";
-import { Roles } from "src/domain/decorators/role.decorator";
-import { Role } from "src/domain/enum/role.enum";
-import { FindUserValidator } from "src/infra/validators/user/find.validator";
-import { DeleteUserUsecase } from "src/usecase/user/delete.usecase";
+import { Roles } from "../../../domain/decorators/role.decorator";
+import { Role } from "../../../domain/enum/role.enum";
+import { FindUserValidator } from "../../../infra/validators/user/find.validator";
+import { DeleteUserUsecase } from "../../../usecase/user/delete.usecase";
 
 
 

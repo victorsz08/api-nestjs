@@ -1,8 +1,8 @@
 import { Controller, HttpCode, Param, Post } from "@nestjs/common";
-import { Roles } from "src/domain/decorators/role.decorator";
-import { Role } from "src/domain/enum/role.enum";
-import { RecoveryAccessValidator } from "src/infra/validators/security/recovery-access.validator";
-import { RecoveryAccessUsecase } from "src/usecase/security/recovery-access.usecase";
+import { Roles } from "../../../domain/decorators/role.decorator";
+import { Role } from "../../../domain/enum/role.enum";
+import { RecoveryAccessValidator } from "../../../infra/validators/security/recovery-access.validator";
+import { RecoveryAccessUsecase } from "../../../usecase/security/recovery-access.usecase";
 
 
 

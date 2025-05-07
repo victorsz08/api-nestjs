@@ -2,9 +2,9 @@ import { MiddlewareConsumer, Module, NestModule } from "@nestjs/common";
 import { AuthLoginController } from "../controllers/auth/login.controller";
 import { PrismaService } from "../prisma/prisma.service";
 import { AuthService } from "../prisma/auth.repository.prisma";
-import { AuthInterface } from "src/domain/interface/auth.interface";
-import { AuthLoginUsecase } from "src/usecase/auth/login.usecase";
-import { LoggerMiddleware } from "src/middleware/logger.middleware";
+import { AuthInterface } from "../../domain/interface/auth.interface";
+import { AuthLoginUsecase } from "../../usecase/auth/login.usecase";
+import { LoggerMiddleware } from "../../middleware/logger.middleware";
 import { AuthSessionController } from "../controllers/auth/session.controller";
 
 

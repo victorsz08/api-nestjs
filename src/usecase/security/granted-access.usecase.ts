@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
-import { Role } from "src/domain/enum/role.enum";
+import { Role } from "../../domain/enum/role.enum";
 import { Usecase } from "../usecase";
-import { SecurityInterface } from "src/domain/interface/security.inteface";
+import { SecurityInterface } from "../../domain/interface/security.inteface";
 
 
 

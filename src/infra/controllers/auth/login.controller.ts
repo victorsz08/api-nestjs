@@ -1,7 +1,7 @@
 import { Body, Controller, HttpCode, Post, Res } from "@nestjs/common";
-import { AuthLoginUsecase } from "src/usecase/auth/login.usecase";
+import { AuthLoginUsecase } from "../../../usecase/auth/login.usecase";
 import { Response } from "express";
-import { AuthLoginValidator } from "src/infra/validators/auth/login.validator";
+import { AuthLoginValidator } from "../../validators/auth/login.validator";
 
 @Controller("auth/login")
 export class AuthLoginController {

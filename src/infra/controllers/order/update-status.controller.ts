@@ -1,8 +1,7 @@
 import { Body, Controller, HttpCode, Param, Put } from "@nestjs/common";
-import { StatusEnum } from "src/domain/enum/status.enum";
-import { FindOrderValidator } from "src/infra/validators/order/find.validator";
-import { UpdateStatusValidator } from "src/infra/validators/order/update-status.validator";
-import { UpdateStatusUsecase } from "src/usecase/order/update-status.usecase";
+import { FindOrderValidator } from "../../../infra/validators/order/find.validator";
+import { UpdateStatusValidator } from "../../../infra/validators/order/update-status.validator";
+import { UpdateStatusUsecase } from "../../../usecase/order/update-status.usecase";
 
 
 

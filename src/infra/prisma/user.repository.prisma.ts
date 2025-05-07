@@ -1,9 +1,9 @@
 import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
-import { UserEntity } from "src/domain/entities/user.entity";
-import { ListUserInput, ListUserOutput, UserInterface } from "src/domain/interface/user.interface";
+import { UserEntity } from "../../domain/entities/user.entity";
+import { ListUserInput, ListUserOutput, UserInterface } from "../../domain/interface/user.interface";
 import { PrismaService } from "./prisma.service";
 import { Prisma } from "@prisma/client";
-import { Role } from "src/domain/enum/role.enum";
+import { Role } from "../../domain/enum/role.enum";
 
 
 

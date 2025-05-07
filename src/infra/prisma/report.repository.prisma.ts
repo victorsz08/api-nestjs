@@ -1,8 +1,8 @@
 import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
-import { ReportEntity, ReportCompletionEntity } from "src/domain/entities/report.entity";
-import { ReportInterface } from "src/domain/interface/report.interface";
+import { ReportEntity, ReportCompletionEntity } from "../../domain/entities/report.entity";
+import { ReportInterface } from "../../domain/interface/report.interface";
 import { PrismaService } from "./prisma.service";
-import { StatusEnum } from "src/domain/enum/status.enum";
+import { StatusEnum } from "../../domain/enum/status.enum";
 
 
 
